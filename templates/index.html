@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>UFO Siting</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +14,15 @@
     <div class="row">
       <div class="col-md-4">
         <div class="form-group">
-          <input type="text" class="form-control" id="datetime" placeholder="Datetime">
+            <select id="selColumn" onchange="getData(this.value)">
+              <option value="Datetime">Date Search<input type="text" class="form-control" id="datetime" placeholder="Date"></option>
+              <option value="City">City Search<input type="text" class="form-control" id="city" placeholder="City"></option>
+              <option value="State">State Search<input type="text" class="form-control" id="state" placeholder="State"></option>
+              <option value="Country">Country Search<input type="text" class="form-control" id="country" placeholder="Country"></option>
+              <option value="Shape">Shape Search<input type="text" class="form-control" id="shape" placeholder="Shape"></option>
+              <option value="DurationMinutes">Duration Search<input type="text" class="form-control" id="durationMinutes" placeholder="DurationMinutes"></option>
+              <option value="Comment">Comment Search<input type="text" class="form-control" id="comments" placeholder="Comments"></option>
+            </select>
           <a id="search" class="btn btn-default">Search</a>
         </div>
       </div>
@@ -29,6 +37,7 @@
               <th>State</th>
               <th>Country</th>
               <th>Shape</th>
+              <th>DurationMinutes</th>
               <th>Comments</th>
             </tr>
           </thead>
@@ -38,7 +47,7 @@
       </div>
     </div>
   </div>
-  <script src="data.js" type="text/javascript"></script>
+  <script src="partialdata.js" type="text/javascript"></script>
   <script src="index.js" type="text/javascript"></script>
 </body>
 
